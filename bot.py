@@ -57,8 +57,4 @@ for filename in os.listdir('./cogs'):
     if filename.endswith('.py'):
         client.load_extension(f'cogs.{filename[:-3]}')
 
-<<<<<<< HEAD
 client.run('NzM5NjYxMDA4OTQ3MjQ5MTYy.Xyds_g.YigQtK5UJ-gGI8WsibIfMDctiII')
-=======
-client.run('NzM5NjYxMDA4OTQ3MjQ5MTYy.Xyds_g.f_emwqA3AjEvE-cCVArh9H66DV4')
->>>>>>> parent of f89db24... Update bot.py
