@@ -24,7 +24,7 @@ async def ping(ctx):
     await ctx.send(f'Pong! {client.latency * 1000}ms')
 
 def owner(ctx):
-    return ctx.author.id == 317394276189208576
+    return ctx.author.id == owner account id here
 
 @client.command()
 @commands.check(owner)
@@ -57,4 +57,4 @@ for filename in os.listdir('./cogs'):
     if filename.endswith('.py'):
         client.load_extension(f'cogs.{filename[:-3]}')
 
-client.run('NzM5NjYxMDA4OTQ3MjQ5MTYy.Xyds_g.YigQtK5UJ-gGI8WsibIfMDctiII')
+client.run('bot token here')
