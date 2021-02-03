@@ -8,7 +8,7 @@ client.remove_command('help')
 @client.event
 async def on_ready():
     print('Bot started.')
-    await client.change_presence(activity=discord.Game('I help you do things.'))
+    await client.change_presence(activity=discord.Game('Space Network and DavidDGTNT'))
 
 @client.event
 async def on_command_error(ctx, error):
@@ -24,7 +24,7 @@ async def ping(ctx):
     await ctx.send(f'Pong! {client.latency * 1000}ms')
 
 def owner(ctx):
-    return ctx.author.id == owner ID here
+    return ctx.author.id == 317394276189208576
 
 @client.command()
 @commands.check(owner)
@@ -47,8 +47,14 @@ async def status(ctx, *, txt):
 async def log(ctx, *, txt):
     print(txt)
 
+@client.command()
+@commands.check(owner)
+async def say(ctx, *, txt):
+    await ctx.channel.purge(limit=1)
+    await ctx.send(txt)
+
 for filename in os.listdir('./cogs'):
     if filename.endswith('.py'):
         client.load_extension(f'cogs.{filename[:-3]}')
 
-client.run('bot token here')
+client.run('NzM5NjYxMDA4OTQ3MjQ5MTYy.Xyds_g.YigQtK5UJ-gGI8WsibIfMDctiII')
