@@ -8,7 +8,7 @@ client.remove_command('help')
 @client.event
 async def on_ready():
     print('Bot started.')
-    await client.change_presence(activity=discord.Game('Space Network and DavidDGTNT'))
+    await client.change_presence(activity=discord.Game('DavidDGTNT\'s Discord bot!'))
 
 @client.event
 async def on_command_error(ctx, error):
